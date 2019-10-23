@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Rating Survey</title>
+  <title>Father Survey</title>
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="styles.css" type=text/css" rel="stylesheet">
 </head>
@@ -12,51 +12,82 @@
 
 <body>
   <main>
-    <h1 id="title">Father Rating Survey</h1> <!--User Story 1-->
+    <!--User Story 1-->
+    <h1 id="title">Father Rating Survey</h1>
+    <!--User Story 2-->
     <p id="description">This form is inteded to be filled out by my daughters in order to provide me,
-      their father, with a performance review of my fatherly duties.</p> <!--User Story 2-->
-
-    <!--Survey Form-->
-    <form id="survey-form" action="/formdata.html" method="GET"> <!--User Story 3-->
-      <label id="name-label" for="name">First name:</label> <!--User Story 10-->
-        <input id="name" type="text" name="name" placeholder="Enter your name"> <!--User Story 4-->
+      their father, with a performance review of my fatherly duties. It is in <strong>no way</strong> altered to force
+      them to only say nice things...</p>
+    <!--User Story 3-->
+    <form id="survey-form" action="/formdata.html" method="GET">
+      <!--User Story 10-->
+      <label id="name-label" for="name">First name:</label>
+      <!--User Story 4-->
+      <input id="name" type="text" name="name" placeholder="Enter your name" required>
       <br>
-      <label id="email-label" for="email">Email:</label> <!--User Story 10-->
-        <input id="email" type="email" name="email" placeholder="name@mail.com"> <!--User Story 5/6-->
+      <!--User Story 10-->
+      <label id="email-label" for="email">Email:</label>
+      <!--User Story 5/6-->
+      <input id="email" type="email" name="email" placeholder="name@mail.com" required>
       <br>
-      <label id="number-label" for="age">Age:</label> <!--User Story 10-->
-        <input id="number" type="number" name="age" min="1" max="100" placeholder="0-100"> <!--User Story 7/8/9-->
+      <!--User Story 10-->
+      <label id="number-label" for="age">Age:</label>
+      <!--User Story 7/8/9-->
+      <input id="number" type="number" name="age" min="1" max="100" placeholder="0-100">
       <br>
       <label for="greatest-father">Who is the greatest father in the World?</label>
-        <select id="dropdown" name="greatest-father" required> <!--User Story 12-->
-          <option value="" selected>Who's the best?</option>
-          <option value="momshusband">My mother's husband!</option>
-          <option value="izzysdad">Izzy's Dad!</option>
-          <option value="addiesdad">Addie's Dad!</option>
-        </select>
+      <!--User Story 12-->
+      <select id="dropdown" name="greatest-father" required>
+        <option value="" selected>Who's the best?</option>
+        <option value="momshusband">My mother's husband!</option>
+        <option value="izzysdad">Izzy's Dad!</option>
+        <option value="addiesdad">Addie's Dad!</option>
+      </select>
       <br>
       <p>What is your favorite thing about your dad?</p>
       <!--User Story 13-->
       <input id="handsome" type="radio" name="best-attribute" value="handsome">
       <label for="handsome">He is soooo handsome!</label>
-      <br> 
+      <br>
       <input id="smart" type="radio" name="best-attribute" value="smart">
       <label for="smart">He is the smartest man on earth!</label>
-      <br> 
+      <br>
       <input id="strong" type="radio" name="best-attribute" value="strong">
       <label for="strong">He can beat up Chuck Norris!</label>
-      <br> 
+      <br>
       <input id="brave" type="radio" name="best-attribute" value="brave">
       <label for="brave">He is not afraid of anything!</label>
-      <br> 
+      <br>
+      <p>Do you have any complaints about your father?</p>
+      <!--This is extra-->
+      <input id="yes" type="radio" name="complaints" value="yes" disabled>
+      <label for="yes">Yes</label>
+      <input id="no" type="radio" name="complaints" value="no">
+      <label for="no">None whatsoever; he is great!</label>
+      <br>
       <!--User Story 14-->
       <p>Did you say "Yeah, sure," or "YES, SIR!"?</p>
-      <input id="sir" type="radio" name="suresir" value="yessir">
+      <input id="sir" type="checkbox" name="suresir" value="yessir">
       <label for="sir">YES SIR!</label>
-      <br>
-      <input id="sure" type="radio" name="suresir" value="yeahsure" disabled>
+      <input id="sure" type="checkbox" name="suresir" value="yeahsure" disabled>
       <label for="sure">Yeah, sure</label>
+      <br>
+      <!--User Story 15-->
+      <div>
+        <label for="textarea">Do you have anything else you would like to say about your dear father?</label>
+        <br>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"
+          placeholder="Say something nice, he is watching!"></textarea>
+      </div>
+      <!--User Story 16-->
+      <input id="submit" type="submit" value="Send It!!!">
     </form>
-
   </main>
+  <!--FCC script for testing User Stories-->
+  <script src="bundle.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <footer>
+    <p>Thank you for taking the time to complete this survery. Click this <a href="https://youtu.be/eh7lp9umG2I"
+        target="_blank">link</a> for something fun!</p>
+  </footer>
 </body>
