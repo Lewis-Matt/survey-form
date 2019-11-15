@@ -40,4 +40,6 @@
 
 ### Lessons Learned
 
-* 
+* I should have enclosed each input type (i.e. radio, checkbox, dropdown, etc.) into some sort of div container in order to align items in the form
+* I also should have used a class for each input type so I could easily apply a style to each type (rather than using IDs or the actual input[type=] declaration
+ 
